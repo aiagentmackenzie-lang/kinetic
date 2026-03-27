@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC | The Future of Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#ffffff",
+              "surface-variant": "#e2e2e7",
+              "on-surface-variant": "#5e3f38",
+              "surface-container-highest": "#e2e2e7",
+              "background": "#f9f9fe",
+              "tertiary-container": "#66787a",
+              "surface-bright": "#f9f9fe",
+              "secondary-container": "#58a3fe",
+              "secondary-fixed-dim": "#a4c9ff",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#ffb4a2",
+              "on-primary-fixed": "#3c0700",
+              "secondary-fixed": "#d4e3ff",
+              "inverse-surface": "#2e3034",
+              "on-tertiary-container": "#f5feff",
+              "outline-variant": "#e8bdb3",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#001c39",
+              "primary-fixed": "#ffdad2",
+              "inverse-primary": "#ffb4a2",
+              "on-background": "#1a1c1f",
+              "tertiary": "#4d5f61",
+              "surface-tint": "#b42800",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#d3e6e8",
+              "on-tertiary-fixed": "#0d1e20",
+              "primary-container": "#dc3300",
+              "on-tertiary-fixed-variant": "#384a4c",
+              "on-primary-container": "#fffbff",
+              "surface-container-low": "#f3f3f8",
+              "secondary": "#005fad",
+              "surface-container-high": "#e7e8ed",
+              "surface": "#f9f9fe",
+              "on-secondary-container": "#003869",
+              "tertiary-fixed-dim": "#b7cacc",
+              "on-surface": "#1a1c1f",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#004884",
+              "surface-container-lowest": "#ffffff",
+              "primary": "#b02700",
+              "surface-container": "#ededf3",
+              "inverse-on-surface": "#f0f0f5",
+              "on-primary-fixed-variant": "#8a1d00",
+              "outline": "#926f66",
+              "surface-dim": "#d9dadf",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      .bleed-container { margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-stone-900 dark:text-stone-50 font-headline">KINETIC</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 font-['Epilogue'] tracking-tight text-sm uppercase font-semibold transition-all duration-300 ease-in-out hover:opacity-70" href="#">Archive</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 font-['Epilogue'] tracking-tight text-sm uppercase font-semibold transition-all duration-300 ease-in-out hover:opacity-70" href="#">Technology</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 font-['Epilogue'] tracking-tight text-sm uppercase font-semibold transition-all duration-300 ease-in-out hover:opacity-70" href="#">Impact</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 font-['Epilogue'] tracking-tight text-sm uppercase font-semibold transition-all duration-300 ease-in-out hover:opacity-70" href="#">News</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-red-700 dark:text-red-500 hover:opacity-70 transition-all active:scale-95 duration-150">Connect</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="professional headshot of a woman with a confident expression in neutral lighting and minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfHB8DAryGmPIJvJmGN7ma9QpjNE9UrpACVCF8h-2dCoglnHf67WOLAfb9z-tpSIfjeC9JxySw-ePvrTZRNPTHEW7gdVy1KtRcaD1p2KZA2DN8KyiSLKlMAdlr6BijU1d9QFK-8Xf1O2mzkGeqEkoYq61taCTuX0RDaJFipsE9_pB7fpR0AwEevMcsLMplPfF8vL9HH9yduQo04sb7wSvvtsJcokzp_5bGv4htkha3eOs8gU9NWF6-cse51uKMkvocEv7GAOr9b6dO"/>
+</div>
+</div>
+</nav>
+</header>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative px-8 pt-20 pb-32 max-w-screen-2xl mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8 z-10">
+<span class="font-label text-sm tracking-[0.2em] uppercase text-primary mb-6 block">Legacy in Motion</span>
+<h1 class="font-headline text-[clamp(3.5rem,10vw,7rem)] leading-[0.9] font-black tracking-tighter text-on-background mb-10">
+                        THE ART OF<br/><span class="text-primary italic">DIGITAL</span> PERMANENCE.
+                    </h1>
+<p class="max-w-xl text-lg text-on-surface-variant leading-relaxed">
+                        Redefining the boundaries of preservation through high-velocity data structures and editorial curation. Kinetic Archive is the world's most sophisticated living record.
+                    </p>
+</div>
+<div class="lg:col-span-4 flex justify-end">
+<div class="w-full aspect-[3/4] bg-surface-container-low overflow-hidden rounded-lg shadow-2xl relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Abstract vibrant red liquid flowing and swirling in deep shadows with sharp highlights and high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdt0VjSVdIQmELfnj3_RrA_pjUS_yN8p-nlH3lNnClXOl5oA7uy1rntr13m3lvohYT27QNG5v9aTVkJl7lvFbi-G2bcYA0yw-uo86unS1qCXw9GGLmhn9frC8A6W_GByU1VLYzTkJxE1ll2qIwTnvoK9znhJT9FUjvABwtDyhX2BIQtdmV9xRwuTycTNMXFl3jeSc3DbmO-Wq3MoQ-8L59FVcxjG2mQECrvWa9F7MM8OjdSlV1CFKeGT5eo-bgw3xOd_eEKAA6OcC6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="font-label text-xs text-white/70 uppercase tracking-widest block mb-2">Featured Series</span>
+<h3 class="font-headline text-xl text-white font-bold">The Velocity of Crimson</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technology Section (Asymmetric Bento) -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline text-5xl font-extrabold tracking-tight mb-6">TECHNOLOGY</h2>
+<p class="text-on-surface-variant font-body">Our infrastructure is built for the next century. Using decentralized nodes and cryptographic verification to ensure that every byte of history remains untampered.</p>
+</div>
+<a class="font-label text-xs font-bold uppercase tracking-widest border-b-2 border-primary pb-1 text-primary hover:opacity-60 transition-opacity" href="#">Explore System</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tech Card 1 -->
+<div class="md:col-span-2 bg-surface-container-lowest p-12 rounded-xl flex flex-col justify-between group">
+<div class="max-w-md">
+<span class="font-label text-xs uppercase tracking-widest text-primary mb-4 block">01 / Neural Mapping</span>
+<h3 class="font-headline text-3xl font-bold mb-6">Contextual Retrieval Engine</h3>
+<p class="text-on-surface-variant mb-8">Move beyond keywords. Our engine understands the emotional and historical weight of data, surfacing content that resonates with the present moment.</p>
+</div>
+<div class="h-64 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Extreme close-up of high-tech circuit board illuminated by intense red neon lights with dark metallic reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNftnYdIItloD5PGuDVf_9gDEJ3mH_BllLqNB3MULQ33teJ8NO5es4u3YuId6zeRoYd1fn4HL_9A3LsUivCAesi6UB3K3Txp65dFgjuj7VN5yCKUh1yW6znqqYXZoM4GPpP2cQRswBlkOkx0dtmXORvAAcGl6sr19DOLQ_bncuP1XZtm-KscP2K-5YgSOfvSYou-cxvsCOqdTvuwVK5GjchVlGIPZP4KeYn8suknPPJDFx9Mhva31inHuX2oMNPvqq8QCAGg4aEmCl"/>
+</div>
+</div>
+<!-- Tech Card 2 -->
+<div class="bg-primary p-12 rounded-xl flex flex-col justify-between text-on-primary">
+<div>
+<span class="font-label text-xs uppercase tracking-widest opacity-70 mb-4 block">02 / Secure Core</span>
+<h3 class="font-headline text-3xl font-bold mb-6">Hardened Immutable Ledgers</h3>
+</div>
+<div class="flex flex-col gap-4">
+<div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">shield</span>
+</div>
+<p class="text-sm leading-relaxed opacity-90">Every interaction within the Kinetic Archive is cryptographically signed and stored across 4,000 global nodes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Section (Image Bleed) -->
+<section class="py-32 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<h2 class="font-headline text-5xl font-extrabold tracking-tight mb-10 leading-tight">PRESERVING THE<br/><span class="text-primary italic">HUMAN</span> ELEMENT.</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="text-primary font-label text-xl font-bold">85k</div>
+<div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Global Contributors</h4>
+<p class="text-on-surface-variant text-sm">Artists and scientists from 120 nations documenting the evolution of our species.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="text-primary font-label text-xl font-bold">1.2pb</div>
+<div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Unstructured Data</h4>
+<p class="text-on-surface-variant text-sm">Converting raw existence into structured knowledge for future civilizations.</p>
+</div>
+</div>
+</div>
+<button class="mt-16 bg-gradient-to-br from-primary to-primary-container text-white px-10 py-5 rounded-md font-label uppercase text-xs font-bold tracking-[0.2em] shadow-xl hover:opacity-90 transition-all active:scale-95">Download Impact Report</button>
+</div>
+<div class="relative">
+<div class="aspect-square bg-surface-container-low rounded-full overflow-hidden scale-110 shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Close-up of a human eye with intense red light reflection in the pupil and sharp focus on the iris texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPIZtww_UvJMaQu9Rp5F1waledChvHCBIenAeZ1VyRkQnqROaA1qVWX2-W6UNTJScK1Zixmg5eie96R1T3JtaoQ05tY_NQ36MUznx94gzP8eE2HGI0APk31rGNZsS-kkYCPr2bnkbumKn2oCOZFrsxgLGWjqZW8EmRqroxj7Xka_NC8Qb4jAvg-Ycwi8CL_G_4nqQlqVAJv1gXI1YLomLDCY3Q9JLXubV_b9TNVP9M8zO-8vhISU0vOimYuHkLTAJdBzLZS7jQRmlv"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-surface-container-lowest p-8 rounded-lg shadow-xl max-w-xs border border-outline-variant/10">
+<p class="text-sm font-body italic text-on-surface leading-relaxed">"Kinetic isn't just storing files; it's capturing the vibration of our era for those who follow."</p>
+<span class="block mt-4 font-label text-[10px] uppercase tracking-widest font-bold">— Dr. Elena Vance, Editorial Lead</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News Section (Horizontal Scroll/Editorial Cards) -->
+<section class="bg-surface py-32">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex items-center justify-between mb-16">
+<h2 class="font-headline text-4xl font-extrabold tracking-tight uppercase">Latest News</h2>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+<div class="flex gap-8 overflow-x-auto no-scrollbar pb-12">
+<!-- News Card 1 -->
+<div class="min-w-[400px] group cursor-pointer">
+<div class="aspect-[16/10] bg-surface-container-low rounded-lg mb-6 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Wide shot of a futuristic data center with rows of server racks glowing with deep red ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtV0E39kHiZxXTGKfuW-z8V_I1w2N_sSM9OFw7oxpgzMitjLphGNNb3p-aNJGCp1kWJn8Le7L2hkVmQIU217AYwjgC6hZV6pFdcTIzpVEZ0xYAYVy1mYzYHe0MEvkNSgYaAG-bEGCjbiEggDEruPfiTyDZkfTtNwdf_V19ICSS05RqbVsuumpgoCsr4nxrcmPMYz9dwDJdqUmZ_kQOlRDND3UOXKHB_d4lszfcMgMBw5KoFDicQ0WA-b6L7TezkzdFnUQX8OBsOIxL"/>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold mb-3 block">Technology / Mar 24</span>
+<h3 class="font-headline text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Quantum Layer-3 Integration Successfully Deployed</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Deploying the third layer of quantum-resistant storage protocols across our primary European nodes.</p>
+</div>
+<!-- News Card 2 -->
+<div class="min-w-[400px] group cursor-pointer">
+<div class="aspect-[16/10] bg-surface-container-low rounded-lg mb-6 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Abstract digital grid representing big data with glowing red nodes and lines on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkfFGsWYsm96hMf4Og6KiZYvP5aab3LV7qygn8JphXICdobzTy3JOptqUFLp-2AD1tLP6JyOOyjegNrxMf1r9cy9bNFxpHpT-Y3Th29GeyF2cJ9uE6erNeeTpLdHAxCNPrJncFtdz40Rd45rvJbLNMGjEbkQ4zAgnJ0rAIBo_xCKoh-3PpEXnb5O1OfVZHkK8EzvpHoI0IsXjrJFZ2VPLd5iK9ic4TvZJBBCW3s0-Nlx3mjgsEErzvirxPm4DSQnRlXOevYBRkSpoq"/>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold mb-3 block">Impact / Mar 20</span>
+<h3 class="font-headline text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Global Archive Summit: 2024 Retrospective</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Reviewing the milestones achieved in digital preservation during the first quarter of the year.</p>
+</div>
+<!-- News Card 3 -->
+<div class="min-w-[400px] group cursor-pointer">
+<div class="aspect-[16/10] bg-surface-container-low rounded-lg mb-6 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Macro photography of structured red patterns resembling biological cells under a microscope with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4qYeOLyQSxICgnz2N9wqgir2Ox5lb6H534kVSaHh3VqGOKFtuyiGv-_YDFcuYTOc1bbmVOfESu5UzXTsr90M2Qn4FfN2gTl0FXLpZ2pUz2kNR638P6qnubijprtcoMb-1RRELb7wvrK95SDhdtjh_Z3pL8Zydv0L6HfqltBS80u_hGrwt1hi4BE1k0VIrzXOg5Wx5dyGUZtlvYFp4RTq16M_wWILokprZOF1sT2L-xbvWbJbcTzeadwuzqc-qaf5AInRQcOxw4mSD"/>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold mb-3 block">Archive / Mar 15</span>
+<h3 class="font-headline text-2xl font-bold mb-4 group-hover:text-primary transition-colors">The Biological Data Bridge Experiment</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Exploring the possibilities of long-term storage within synthetic DNA strands for eternal archives.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-40 bg-on-background text-surface relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary rounded-full blur-[150px]"></div>
+<div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-secondary-container rounded-full blur-[120px]"></div>
+</div>
+<div class="max-w-screen-xl mx-auto px-8 text-center relative z-10">
+<h2 class="font-headline text-6xl md:text-8xl font-black tracking-tighter mb-12">BECOME PART OF<br/>THE ETERNAL RECORD.</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="w-full md:w-auto bg-primary text-white px-12 py-6 rounded-md font-label uppercase text-sm font-bold tracking-widest hover:bg-primary-container transition-colors">Get Started</button>
+<button class="w-full md:w-auto border border-white/20 text-white px-12 py-6 rounded-md font-label uppercase text-sm font-bold tracking-widest hover:bg-white/10 transition-colors">View Pricing</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width py-12 px-8 bg-stone-50 dark:bg-stone-950 border-t border-stone-200/10">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold text-stone-900 dark:text-stone-100 font-headline mb-8 md:mb-0">KINETIC</div>
+<div class="flex gap-8 mb-8 md:mb-0">
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-stone-500 dark:text-stone-500 hover:text-red-700 dark:hover:text-red-500 transition-colors" href="#">Privacy</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-stone-500 dark:text-stone-500 hover:text-red-700 dark:hover:text-red-500 transition-colors" href="#">Terms</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-stone-500 dark:text-stone-500 hover:text-red-700 dark:hover:text-red-500 transition-colors" href="#">Editorial</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-stone-500 dark:text-stone-500 hover:text-red-700 dark:hover:text-red-500 transition-colors" href="#">Contact</a>
+</div>
+<div class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-stone-500">
+                © 2024 Kinetic Archive. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

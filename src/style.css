@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  /* Kinetic color palette */
+  --color-primary: #b02700;
+  --color-primary-container: #dc3300;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed: #ffdad2;
+  --color-primary-fixed-dim: #ffb4a2;
+  --color-inverse-primary: #ffb4a2;
+
+  --color-secondary: #005fad;
+  --color-secondary-container: #58a3fe;
+  --color-on-secondary: #ffffff;
+  --color-secondary-fixed: #d4e3ff;
+
+  --color-tertiary: #4d5f61;
+  --color-tertiary-container: #66787a;
+  --color-on-tertiary: #ffffff;
+
+  --color-surface: #f9f9fe;
+  --color-surface-dim: #d9dadf;
+  --color-surface-bright: #f9f9fe;
+  --color-surface-container: #ededf3;
+  --color-surface-container-high: #e7e8ed;
+  --color-surface-container-highest: #e2e2e7;
+  --color-surface-container-low: #f3f3f8;
+  --color-surface-lowest: #ffffff;
+
+  --color-on-surface: #1a1c1f;
+  --color-on-surface-variant: #5e3f38;
+  --color-inverse-surface: #2e3034;
+  --color-inverse-on-surface: #f0f0f5;
+  --color-inverse-on-surface-muted: rgba(240, 240, 245, 0.7);
+
+  --color-outline: #926f66;
+  --color-outline-variant: #e8bdb3;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+
+  --color-background: #f9f9fe;
+  --color-on-background: #1a1c1f;
+
+  /* Typography */
+  --font-headline: 'Epilogue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'Space Grotesk', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Nav glassmorphism on scroll */
+#nav.scrolled .nav-inner {
+  background: rgba(249, 249, 254, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(232, 189, 179, 0.15);
+  box-shadow: 0 4px 24px rgba(26, 28, 31, 0.04);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #b02700 0%, #dc3300 100%);
+  color: #ffffff;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  color: var(--color-primary);
+  border: 1px solid rgba(176, 39, 0, 0.25);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.btn-ghost:hover {
+  border-color: rgba(176, 39, 0, 0.55);
+  background: rgba(176, 39, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+.btn-ghost-light {
+  color: rgba(240, 240, 245, 0.75);
+  border: 1px solid rgba(240, 240, 245, 0.2);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.btn-ghost-light:hover {
+  border-color: rgba(240, 240, 245, 0.55);
+  color: #f0f0f5;
+  transform: translateY(-1px);
+}
+
+/* Tech cards */
+.tech-card {
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.tech-card:hover {
+  background: #ffffff;
+  box-shadow: 0 30px 80px rgba(26, 28, 31, 0.08) !important;
+  transform: translateY(-6px);
+}
+
+/* News cards */
+.news-card {
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.news-card:hover {
+  background: #ffffff;
+  box-shadow: 0 30px 80px rgba(26, 28, 31, 0.08) !important;
+  transform: translateY(-4px);
+}
+
+/* Carousel button */
+.carousel-btn {
+  color: var(--color-on-surface);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+/* Reveal — initial state managed by GSAP */
+.reveal {
+  will-change: transform, opacity;
+}
